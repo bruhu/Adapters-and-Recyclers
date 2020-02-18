@@ -7,8 +7,13 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,6 +37,19 @@ class MainActivity : AppCompatActivity() {
             val dialog = DialogNewNote()
             dialog.show(supportFragmentManager, "")
         }
+        //initialize recyclerView w/ the widget from the layout
+        recyclerView = findViewById<View>(R.id.recyclerView) as RecyclerView
+        // NoteAdapter instance initialized calling the consructor we coded
+        adapter = NoteAdapter(this, noteList)
+        val layoutManager = LinearLayoutManager(applicationContext)
+        recyclerView!!.layoutManager = layoutManager
+        recyclerView!!.itemAnimator = DefaultItemAnimator()
+
+        // Add a neat dividing line between items in the list
+        recyclerView!!.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
+
+        // set the adapter
+        recyclerView!!.adapter = adapter
 
 
     }
