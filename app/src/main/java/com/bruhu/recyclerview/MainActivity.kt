@@ -55,7 +55,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun createNewNote(n: Note) {
-
+        // adds not to the ArrayList instance
+        noteList.add(n)
+        // lets our adapter know a new note has been added
+        adapter!!.notifyDataSetChanged()
     }
 
 
