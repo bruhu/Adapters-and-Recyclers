@@ -32,7 +32,8 @@ class MainActivity : AppCompatActivity() {
             dialog.show(supportFragmentManager, "")
         }
         //initialize recyclerView w/ the widget from the layout
-        recyclerView = findViewById<View>(R.id.recyclerView) as RecyclerView
+        recyclerView =
+            findViewById<View>(R.id.recyclerView) as RecyclerView
         // NoteAdapter instance initialized calling the consructor we coded
         adapter = NoteAdapter(this, noteList)
         val layoutManager = LinearLayoutManager(applicationContext)
