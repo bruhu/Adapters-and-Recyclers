@@ -31,9 +31,9 @@ class NoteAdapter(
         holder: ListItemHolder, position: Int) {
 
         val note = noteList!![position]
-        holder.title.text = note.title
+        holder.mTitle.text = note.title
         // Show the first 15 characters of the actual note
-        holder.description.text =
+        holder.mDescription.text =
             note.description!!.substring(0, 15)
 
         // What is the status of the note?
