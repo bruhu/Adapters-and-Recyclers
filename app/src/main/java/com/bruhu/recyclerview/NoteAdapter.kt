@@ -64,13 +64,14 @@ class NoteAdapter(
                 view.isClickable = true
                 view.setOnClickListener(this)
             }
-        }
         // the call will show the clicked note
-        override fun onClick(view: View) {
+        override fun onClick(v: View?) {
             mainActivity.showNote(adapterPosition)
         }
+    }
+
+
         // end of ListItemHolder
     }
 
 // end of NoteAdapter
-}
