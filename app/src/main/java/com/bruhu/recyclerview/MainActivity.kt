@@ -50,12 +50,10 @@ class MainActivity : AppCompatActivity() {
 
         // set the adapter
         recyclerView!!.adapter = adapter
-
-
     }
 
     fun createNewNote(n: Note) {
-        // adds not to the ArrayList instance
+        // adds note to the ArrayList instance
         noteList.add(n)
         // lets our adapter know a new note has been added
         adapter!!.notifyDataSetChanged()

@@ -50,7 +50,7 @@ class NoteAdapter(
     inner class ListItemHolder(view: View) {
         RecyclerView.ViewHolder(view),
         View.onClickListener {
-            // reference to each TextView widgets in the layout
+            /* reference to each TextView widgets in the layout */
             internal var title = view.findViewById<View>(R.id.textViewTitle) as TextView
             internal var description = view.findViewById<View>(R.id.textViewDescription) as TextView
             internal var status = view.findViewById<View>(R.id.textViewStatus) as TextView
