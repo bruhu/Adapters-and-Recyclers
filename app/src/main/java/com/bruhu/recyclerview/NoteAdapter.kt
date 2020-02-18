@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 class NoteAdapter(
     // constructor w/ 2 parameters
     private val mainActivity: MainActivity,
-    private val noteList: List<Note>)
-    : RecyclerView.Adapter<NoteAdapter.ListItemHolder>(){
+    private val noteList: List<Note>):
+    RecyclerView.Adapter<NoteAdapter.ListItemHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListItemHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.listitem, parent, false)
@@ -27,21 +27,28 @@ class NoteAdapter(
         return -1
     }
 
-    override fun onBindViewHolder(holder: ListItemHolder, position: Int) {
-        val note = noteList[position]
-        holder.title.text = note.title
+    override fun onBindViewHolder(
+        holder: ListItemHolder, position: Int) {
 
+        val note = noteList!![position]
+        holder.title.text = note.title
         // Show the first 15 characters of the actual note
-        // IF THE USER ENTERES A NOTE UNDER 15 CHARS THE APP WILL CRASH
-        holder.description.text = note.description!!.substring(0, 15)
+        holder.description.text =
+            note.description!!.substring(0, 15)
 
         // What is the status of the note?
-        // Checks the type and assigns the appropriate label from string resources
-        when{
-            note.idea -> holder.status.text = mainActivity.resources.getString(R.string.idea_text)
-            note.important -> holder.status.text = mainActivity.resources.getString(R.string.important_text)
-            note.todo -> holder.status.text = mainActivity.resources.getString(R.string.todo_text)
+        when {
+            note.idea -> holder.status.text =
+                mainActivity.resources.getString(R.string.idea_text)
+
+            note.important -> holder.status.text =
+                mainActivity.resources.getString(R.string.important_text)
+
+
+            note.todo -> holder.status.text =
+                mainActivity.resources.getString(R.string.todo_text)
         }
+
 
     }
 
