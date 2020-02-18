@@ -30,7 +30,7 @@ class NoteAdapter(
     override fun onBindViewHolder(
         holder: ListItemHolder, position: Int) {
 
-        val note = noteList!![position]
+        val note = noteList[position]
         holder.mTitle.text = note.title
         // Show the first 15 characters of the actual note
         holder.mDescription.text =
