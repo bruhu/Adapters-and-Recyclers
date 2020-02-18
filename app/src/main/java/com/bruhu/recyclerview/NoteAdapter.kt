@@ -20,7 +20,7 @@ class NoteAdapter(
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun onBindViewHolder(holder: NoteAdapter.ListItemHolder, position: Int) {
+    override fun onBindViewHolder(holder: ListItemHolder, position: Int) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
