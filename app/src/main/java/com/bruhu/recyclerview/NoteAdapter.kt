@@ -3,10 +3,8 @@ package com.bruhu.recyclerview
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextClock
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import org.w3c.dom.Text
 
 class NoteAdapter(
     // constructor w/ 2 parameters
