@@ -13,15 +13,15 @@ class NoteAdapter(
     : RecyclerView.Adapter<NoteAdapter.ListItemHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListItemHolder {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun getItemCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun onBindViewHolder(holder: ListItemHolder, position: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     inner class ListItemHolder(view: View) {
