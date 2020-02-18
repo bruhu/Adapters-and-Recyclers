@@ -52,7 +52,7 @@ class NoteAdapter(
 
     }
 
-    inner class ListItemHolder(view: View):
+    inner class ListItemHolder(view: View) :
         RecyclerView.ViewHolder(view),
         View.OnClickListener {
             /* reference to each TextView widgets in the layout */
@@ -66,7 +66,7 @@ class NoteAdapter(
             }
         }
         // the call will show the clicked note
-        override fun onClick(view: View){
+        override fun onClick(view: View) {
             mainActivity.showNote(adapterPosition)
         }
         // end of ListItemHolder
