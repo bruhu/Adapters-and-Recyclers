@@ -19,7 +19,12 @@ class NoteAdapter(
     }
 
     override fun getItemCount(): Int {
-
+        // internally used function, it supplies the current numbers of items in List
+        if (noteList != null) {
+            return noteList.size
+        }
+        // error
+        return -1
     }
 
     override fun onBindViewHolder(holder: ListItemHolder, position: Int) {
@@ -31,6 +36,7 @@ class NoteAdapter(
         holder.description.text = note.description!!.substring(0, 15)
 
         // What is the status of the note?
+        // Checks the type and assigns the appropriate label from string resources
         when{
             note.idea -> holder.status.text = mainActivity.resources.getString(R.string.idea_text)
             note.important -> holder.status.text = mainActivity.resources.getString(R.string.important_text)
