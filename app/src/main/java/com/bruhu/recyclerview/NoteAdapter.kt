@@ -11,9 +11,6 @@ class NoteAdapter(
     private val mainActivity: MainActivity,
     private val noteList: List<Note>)
     : RecyclerView.Adapter<NoteAdapter.ListItemHolder>(){
-    class ListItemHolder {
-
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteAdapter.ListItemHolder {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
@@ -26,5 +23,11 @@ class NoteAdapter(
     override fun onBindViewHolder(holder: NoteAdapter.ListItemHolder, position: Int) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
+
+    inner class ListItemHolder {
+
+
+    }
+
 
 }
