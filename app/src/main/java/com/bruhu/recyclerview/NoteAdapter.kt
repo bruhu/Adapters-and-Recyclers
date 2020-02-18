@@ -13,7 +13,8 @@ class NoteAdapter(
     : RecyclerView.Adapter<NoteAdapter.ListItemHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListItemHolder {
-
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.listitem, parent, false)
+        return ListItemHolder(itemView)
     }
 
     override fun getItemCount(): Int {
