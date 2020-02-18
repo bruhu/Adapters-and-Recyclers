@@ -12,7 +12,7 @@ class NoteAdapter(
     private val noteList: List<Note>)
     : RecyclerView.Adapter<NoteAdapter.ListItemHolder>(){
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteAdapter.ListItemHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListItemHolder {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
