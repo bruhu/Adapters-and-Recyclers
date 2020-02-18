@@ -38,14 +38,14 @@ class NoteAdapter(
 
         // What is the status of the note?
         when {
-            note.idea -> holder.status.text =
+            note.idea -> holder.mStatus.text =
                 mainActivity.resources.getString(R.string.idea_text)
 
-            note.important -> holder.status.text =
+            note.important -> holder.mStatus.text =
                 mainActivity.resources.getString(R.string.important_text)
 
 
-            note.todo -> holder.status.text =
+            note.todo -> holder.mStatus.text =
                 mainActivity.resources.getString(R.string.todo_text)
         }
 
@@ -58,7 +58,7 @@ class NoteAdapter(
             /* reference to each TextView widgets in the layout */
             internal var mTitle = view.findViewById<View>(R.id.textViewTitle) as TextView
             internal var mDescription = view.findViewById<View>(R.id.textViewDescription) as TextView
-            internal var status = view.findViewById<View>(R.id.textViewStatus) as TextView
+            internal var mStatus = view.findViewById<View>(R.id.textViewStatus) as TextView
             // init sets whole view as clickable so onClick is triggered
             init {
                 view.isClickable = true
