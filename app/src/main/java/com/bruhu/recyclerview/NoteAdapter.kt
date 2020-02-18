@@ -56,8 +56,8 @@ class NoteAdapter(
         RecyclerView.ViewHolder(view),
         View.OnClickListener {
             /* reference to each TextView widgets in the layout */
-            internal var title = view.findViewById<View>(R.id.textViewTitle) as TextView
-            internal var description = view.findViewById<View>(R.id.textViewDescription) as TextView
+            internal var mTitle = view.findViewById<View>(R.id.textViewTitle) as TextView
+            internal var mDescription = view.findViewById<View>(R.id.textViewDescription) as TextView
             internal var status = view.findViewById<View>(R.id.textViewStatus) as TextView
             // init sets whole view as clickable so onClick is triggered
             init {
