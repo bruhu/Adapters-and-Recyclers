@@ -3,8 +3,10 @@ package com.bruhu.recyclerview
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextClock
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import org.w3c.dom.Text
 
 class NoteAdapter(
     // constructor w/ 2 parameters
@@ -47,10 +49,21 @@ class NoteAdapter(
 
     inner class ListItemHolder(view: View) {
         RecyclerView.ViewHolder(view),
-        View.onClickListener{
-            init
+        View.onClickListener {
+            // reference to each TextView widgets in the layout
+            internal var title = view.findViewById<View>(R.id.textViewTitle) as TextView
+            internal var description = view.findViewById<View>(R.id.textViewDescription) as TextView
+            internal var status = view.findViewById<View>(R.id.textViewStatus) as TextView
+            // init sets whole view as clickable so onClick is triggered
+            init {
+                view.isClickable = true
+                view.setOnClickListener(this)
+            }
         }
-        override fun onClick(view: View)
+        // the call will show the clicked note
+        override fun onClick(view: View){
+            mainActivity.showNote(adapterPosition)
+        }
         // end of ListItemHolder
     }
 
