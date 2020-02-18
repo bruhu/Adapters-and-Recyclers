@@ -55,8 +55,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun createNewNote(n: Note) {
-        // Temporary code
-        tempNote = n
+
     }
 
 
