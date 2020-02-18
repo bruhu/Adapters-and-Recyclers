@@ -16,15 +16,11 @@ import kotlinx.android.synthetic.main.content_main.*
 class MainActivity : AppCompatActivity() {
 
     // Temporary code
-    private var tempNote = Note()
+    // private var tempNote = Note()
 
-    var note1 = Note()
-    var note2 = Note()
-    var note3 = Note()
-    // 96 more lines like the above
-    var note100 = Note()
-
-
+    private val noteList = ArrayList<Note>()
+    private var recyclerView: RecyclerView? = null
+    private var adapter: NoteAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
