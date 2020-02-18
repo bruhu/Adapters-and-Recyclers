@@ -75,4 +75,10 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+    fun showNote(noteToShow: Int) {
+        val dialog = DialogShowNote()
+        dialog.sendNoteSelected(noteList[noteToShow])
+        dialog.show(supportFragmentManager, "")
+    }
 }
