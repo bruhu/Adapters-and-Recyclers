@@ -24,10 +24,14 @@ class NoteAdapter(
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    inner class ListItemHolder {
-
-
+    inner class ListItemHolder(view: View) {
+        RecyclerView.ViewHolder(view),
+        View.onClickListener{
+            init
+        }
+        override fun onClick(view: View)
+        // end of ListItemHolder
     }
 
-
+// end of NoteAdapter
 }
