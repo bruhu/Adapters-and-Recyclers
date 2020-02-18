@@ -10,9 +10,9 @@
     tools:showIn="@layout/activity_main">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="409dp"
-        android:layout_height="354dp"
+        android:id="@+id/recyclerView"
+        android:layout_width="410dp"
+        android:layout_height="676dp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="376dp" />
-
+        tools:layout_editor_absoluteY="54dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
