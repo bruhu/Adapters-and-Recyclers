@@ -33,18 +33,6 @@ class MainActivity : AppCompatActivity() {
             dialog.show(supportFragmentManager, "")
         }
 
-        // Temporary code
-        val button = findViewById<View>(R.id.button) as Button
-        button.setOnClickListener {
-            // Create a new DialogShowNote called dialog
-            val dialog = DialogShowNote()
-
-            // Send the note via the sendNoteSelected method
-            dialog.sendNoteSelected(tempNote)
-
-            // Create the dialog
-            dialog.show(supportFragmentManager, "123")
-        }
 
     }
 
